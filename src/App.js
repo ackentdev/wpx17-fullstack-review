@@ -5,8 +5,7 @@ import {Switch, Route} from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
-// import Profile from './components/Profile/Profile';
-import Account from './components/Account/Account';
+import Profile from './components/Profile/Profile';
 import Main from './components/Main/Main';
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <Switch>
         <Route exact path="/" component={Login}/>
         <Route path="/main" component={Main}/>
-        <Route path="/account" component={Account}/>
         <Route path="/profile" component={Profile}/>
       </Switch>
     </div>
