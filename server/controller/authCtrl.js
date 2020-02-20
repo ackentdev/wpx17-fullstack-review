@@ -46,6 +46,7 @@ module.exports = {
         res.sendStatus(200);
     },
     userSession: (req, res, next) => {
+        console.log('requested!')
         res.status(200).send(req.session.user)
     }
 }

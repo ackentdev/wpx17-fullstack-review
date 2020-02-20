@@ -28,6 +28,7 @@ class Login extends Component{
     }
 
     render(){
+        console.log(this.props.user)
         return(
             <div> 
                 <h1>Login</h1>
