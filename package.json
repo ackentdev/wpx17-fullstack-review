@@ -2,6 +2,7 @@
   "name": "wpx18-fullstack-review",
   "version": "0.1.0",
   "main": "server/",
+  "proxy": "http://localhost:4000",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
