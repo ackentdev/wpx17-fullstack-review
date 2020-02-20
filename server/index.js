@@ -4,8 +4,9 @@ const express = require('express');
 const massive = require('massive');
 const session = require('express-session');
 // Import variables
-const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
+const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env;
 const {login, register, logout, userSession} = require('./controller/authCtrl')
+const {getAllMemes} = require('./controller/memeCtrl');
 // top-level middleware
 const app = express();
 app.use(express.json());
@@ -31,8 +32,9 @@ massive(CONNECTION_STRING).then( db => {
 app.post('/auth/login', login);
 app.post('/auth/register', register);
 app.get('/auth/userSession', userSession);
-app.get('/api/logout', logout);
+app.get('/auth/logout', logout);
 // MEMES
+app.get('/api/get_memes', getAllMemes);
 
 
 // run server on our port
